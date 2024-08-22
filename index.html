@@ -1,5 +1,166 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Josorz</title>
-<meta http-equiv="refresh" content="0; URL=https://youtu.be/dQw4w9WgXcQ">
-<link rel="canonical" href="https://youtu.be/dQw4w9WgXcQ">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+            font-family: "Open Sans", sans-serif;
+            user-select: none;
+        }
+
+        .vertical-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100svh;
+            background: #fff1e8;
+        }
+
+        .container {
+            min-width: 25rem;
+            max-width: 40rem;
+            margin: auto;
+            width: 50%;
+            border: .1rem solid #45423d;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            border-radius: 2rem;
+            background-color: #ffdd00;
+        }
+
+        .container_links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .container_link,
+        .container_link:link {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            border: 0.1rem solid black;
+            border-radius: 2rem;
+            text-decoration: none;
+            color: #fff1e8;
+            box-shadow: .3rem .4rem 0rem .1rem #000;
+            padding: 0.75rem;
+        }
+
+        .container_link--github {
+            background-color: #21262d;
+        }
+
+        .container_link--linkedin {
+            background-color: #0077b5;
+        }
+
+        .container_link--projects {
+            background-color: #fff1e8;
+            color: #21262d;
+        }
+
+        .container_link:hover {
+            transform: translateY(-.2rem);
+        }
+
+        .container_link:focus {
+            transform: translate(.4rem, .3rem);
+            box-shadow: 0px 0px 0px 0px #000;
+        }
+
+        .container_profile {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .image {
+            max-width: 15rem;
+            flex: 2;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid #000;
+        }
+
+        .container_idshape {
+            height: 2rem;
+            width: 5rem;
+            border: 1px solid #000;
+            background-color: #fff1e8;
+            border-radius: 2rem;
+        }
+
+        .dark-button {
+            position: fixed;
+            right: 0;
+            font-size: 5rem;
+            padding: 2rem;
+            cursor: pointer;
+        }
+
+        .dark-button:hover {}
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('dark-button').addEventListener("click", () => {
+                console.log(window.getComputedStyle(document.getElementById('background')).backgroundColor)
+                if (window.getComputedStyle(document.getElementById('background')).backgroundColor == "rgb(255, 241, 232)") {
+                    document.getElementById('background').style.backgroundColor = '#21262d'
+                    document.getElementById('container_idshape').style.backgroundColor = '#21262d'
+                    document.getElementById('dark-button').style.color = '#fff1e8'
+                    document.getElementById('dark-button').innerText = '☼'
+                } else {
+                    document.getElementById('background').style.backgroundColor = 'rgb(255, 241, 232)'
+                    document.getElementById('container_idshape').style.backgroundColor = 'rgb(255, 241, 232)'
+                    document.getElementById('dark-button').style.color = '#21262d'
+                    document.getElementById('dark-button').innerText = '☽'
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <span class="dark-button" id="dark-button">☽</span>
+    <div class="vertical-center" id="background">
+        <div class="container">
+            <span class="container_idshape" id="container_idshape"></span>
+            <div class="container_profile">
+                <img src="hero-pic.png" class="image">
+                <div class="container-text">
+                    <h1>John Angelo Soriano</h1>
+                    <h2>Computer Science Junior</h2>
+                </div>
+            </div>
+            <div class="container_links">
+                <a class="container_link container_link--github" href="https://www.github.com/josorz">Github</a>
+                <a class="container_link container_link--linkedin"
+                    href="https://www.linkedin.com/in/john-angelo-soriano-699048260/">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
