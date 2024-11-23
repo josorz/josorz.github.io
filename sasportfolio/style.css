@@ -164,3 +164,9 @@ html {
 #Paris {
   font-size: 1.75em;
 }
+
+#Paris > img {
+  width: 75%;
+  display: flex;
+  align-self: center;
+}
