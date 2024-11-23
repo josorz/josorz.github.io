@@ -154,3 +154,13 @@ html {
   border-radius: 50%;
   border: 1px solid #000;
 }
+
+#Paris {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#Paris {
+  font-size: 1.75em;
+}
