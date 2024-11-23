@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("defaultOpen").click();
+        })
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        } 
+    </script>
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <div class="outer-containers">
+        <div class="left-intro">
+            <div class="info">
+                <img class="image-profile" src="../hero-pic.png">
+                <h1>John Angelo Soriano</h1>
+                <p>Communicable Computer Science junior. Eager to embrace the latest trends and innovations in
+                    technology.</p>
+                <div class="container_links">
+                    <a class="container_link container_link--lslinks"
+                        href="https://dlsu-vcf-csm.symplicity.com/profiles/johnangelo.soriano">LSLinks</a>
+                    <a class="container_link container_link--resume" href="./assets/SASResume.pdf">Resume</a>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-tabs">
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Portfolio</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Reflection</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="London" class="tabcontent">
+                <div class="portfolio-tab">
+                    <div class="portfolio-cell">
+                        <div class="portfolio-cell-image">
+                            <img src="assets/project-manager.jpg" alt="">
+                            <h3>Project Manager Application</h3>
+                            <p> Manage contracts, dues, and property maintenance of leased properties.</p>
+                            <div class="portfolio-cell-tags">
+                                <span class="cell-tag cell-tag--node">NodeJS</span>
+                                <span class="cell-tag cell-tag--mongo">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-cell">
+                        <div class="portfolio-cell-image">
+                            <img src="assets/reddit-clone.PNG" alt="">
+                            <h3>Reddit Clone</h3>
+                            <p>Create posts, add comments, and vote for the front page.</p>
+                            <div class="portfolio-cell-tags">
+                                <span class="cell-tag cell-tag--node">NodeJS</span>
+                                <span class="cell-tag cell-tag--mongo">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-cell">
+                        <div class="portfolio-cell-image">
+                            <img src="assets/prolog.PNG" alt="">
+                            <h3>Family Tree Chatbot</h3>
+                            <p>Add family relationships and ask bot questions about the input.</p>
+                            <div class="portfolio-cell-tags">
+                                <span class="cell-tag cell-tag--python">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-cell">
+                        <div class="portfolio-cell-image">
+                            <img src="assets/sokoban.PNG" alt="">
+                            <h3>Sokoban Bot</h3>
+                            <p>Automatically solve popular block pushing game. Works on easy-medium sokoban
+                                problems.</p>
+                            <div class="portfolio-cell-tags">
+                                <span class="cell-tag cell-tag--java">Java</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Paris" class="tabcontent">
+                <h3>Reflection</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
