@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Open Sans", "Poppins", sans-serif;
+}
+
+:root {
+  --accent: #ffdd00;
+  --bg: #fff1e8;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #555;
+  --border: #000000;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Open Sans", "Poppins", sans-serif;
+  user-select: none;
+}
